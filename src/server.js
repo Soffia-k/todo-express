@@ -21,4 +21,7 @@ app.use('/api/tasks', require('./routes/tasks'));
 
 app.use('/', express.static(path.join(__dirname, '..', 'public')));
 
-app.listen(port, () => console.log(`http://localhost:${port}`));
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`listening on ${port}`);
+});
