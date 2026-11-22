@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-const { port } = require('./config');
 const auth = require('./auth');
 
 const app = express();

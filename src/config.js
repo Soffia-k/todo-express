@@ -6,7 +6,6 @@ for (const k of required) {
 }
 
 module.exports = {
-  port: Number(process.env.PORT || 3000),
   ownerLogin: process.env.OWNER_LOGIN,
   ownerFullName: process.env.OWNER_FULL_NAME,
   apiToken: process.env.API_TOKEN,
