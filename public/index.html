@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Список дел</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Список дел</h1>
+
+  <section id="auth-section">
+    <label>Токен API:
+      <input id="token-input" type="password" placeholder="Bearer-токен" autocomplete="off">
+    </label>
+    <button id="login-btn">Войти</button>
+    <p id="author-info"></p>
+  </section>
+
+  <section id="app-section" hidden>
+    <div>
+      <label>runId:
+        <input id="runid-input" type="text" value="manual" maxlength="64">
+      </label>
+      <button id="load-btn">Загрузить</button>
+    </div>
+
+    <h2>Новое дело</h2>
+    <form id="create-form">
+      <input id="create-title" type="text" placeholder="Название" maxlength="200" required>
+      <input id="create-runid" type="text" placeholder="runId" maxlength="64" value="manual" required>
+      <button type="submit">Создать</button>
+    </form>
+
+    <p id="error" class="error"></p>
+
+    <ul id="tasks-list"></ul>
+  </section>
+
+  <script src="/app.js"></script>
+</body>
+</html>
